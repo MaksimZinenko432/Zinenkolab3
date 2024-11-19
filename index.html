@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Інвойс</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="invoice-container">
+    <div class="invoice-header">
+      <p>Дата: <input type="date" id="invoice-date"></p>
+      <h1>Інвойс #001</h1>
+      <p>Крайній термін: <input type="date" id="due-date"></p>
+    </div>
+
+    <div class="invoice-section">
+      <h3>Рахунок від</h3>
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Хто надсилає інвойс?">
+    </div>
+
+    <div class="invoice-section">
+      <h3>Рахунок для</h3>
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Кому надсилається інвойс?">
+    </div>
+
+    <div class="invoice-items">
+      <table>
+        <tr>
+          <th>Елемент</th>
+          <th>К-сть</th>
+          <th>Ціна</th>
+          <th>Сума</th>
+          <th>Дії</th>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="Назва елемента"></td>
+          <td><input type="number" min="1" value="1"></td>
+          <td><input type="number" min="0" step="0.01" placeholder="0.00"></td>
+          <td>$0.00</td>
+          <td><button>Видалити</button></td>
+        </tr>
+      </table>
+      <button>Додати елемент</button>
+    </div>
+
+    <div class="invoice-summary">
+      <p>Підсумок: $0.00</p>
+      <button>Додати знижку</button>
+      <button>Додати податок</button>
+      <p>Разом: $0.00</p>
+    </div>
+
+    <div class="invoice-footer">
+      <textarea placeholder="Дякуємо за вашу покупку!"></textarea>
+      <button>Відправити інвойс</button>
+      <button>Завантажити</button>
+    </div>
+  </div>
+</body>
+</html>
